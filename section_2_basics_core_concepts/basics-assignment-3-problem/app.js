@@ -16,9 +16,16 @@ const app = Vue.createApp({
 	},
 	computed: {
 		result() {
-			if (this.counter <= 37) {
+			console.log(this.counter);
+			
+			if (this.counter < 37) {
 				return "Not there yet";
-			} else {
+			} 
+			if (this.counter === 37) {
+				return this.counter;
+			}
+
+			if (this.counter > 37){
 				return "Too much!";
 			}
 		}
